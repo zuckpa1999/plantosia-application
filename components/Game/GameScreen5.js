@@ -5,7 +5,7 @@ import {
     responsiveScreenWidth,
     responsiveScreenFontSize
 } from "react-native-responsive-dimensions";
-import GameScreen4 from './GameScreen4.js'
+import GameScreen6 from './GameScreen6.js'
 export default function GameScreen3({ navigation }) {
 
 
@@ -26,11 +26,11 @@ export default function GameScreen3({ navigation }) {
             <View style={styles.greenArea}>
                 <Image
                     style={styles.leaf}
-                    source={require('../../asset/lamtonLogo.png')}
+                    source={require('../../asset/fruitLogo.png')}
                 />
                 <View style={styles.box}>
-                    <Text style={styles.msg}>อันดับแรก, ถ่ายรูปส่วน
- <Text style={{ color: '#87D38A' }}>ลำต้น</Text>  ของพืช</Text>
+                    <Text style={styles.msg}>อันดับสุดท้าย, ถ่ายรูปส่วน
+ <Text style={{ color: '#87D38A' }}> ผล</Text>  ของพืช</Text>
                 </View>
                 <Image
                     style={styles.cameraArea}
@@ -41,7 +41,11 @@ export default function GameScreen3({ navigation }) {
 
                     source={require('../../asset/camera_2.png')}
                 />
-                <TouchableOpacity onPress={() => navigation.navigate('Game4')}>
+                <View style={styles.box2}>
+                    <Text style={styles.msg2}>ถ้าพืชต้นนี้  <Text style={{ color: 'red' }}>ไม่มีส่วนผล </Text>
+สามารถกดถัดไปเพื่อ <Text style={{ color: 'red' }}>ข้าม</Text> ได้เลย</Text>
+                </View>
+                <TouchableOpacity onPress={() => navigation.navigate('Game6')}>
                     <Image
                         style={styles.nextButton}
                         source={require('../../asset/nextButton.png')}
@@ -110,6 +114,16 @@ const styles = StyleSheet.create({
         top: -47
 
     },
+    box2: {
+        // marginBottom: '9%',
+        left: 75,
+        width: 190,
+        height: 55,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        position: 'relative',
+        marginTop: '4%',
+    },
     msg: {
         textAlign: 'center',
         fontWeight: '700',
@@ -117,14 +131,22 @@ const styles = StyleSheet.create({
         fontSize: 22,
 
     },
+    msg2: {
+
+        textAlign: 'center',
+        fontWeight: '700',
+        padding: 4,
+        fontSize: 14,
+    },
     mascot: {
         marginTop: '36%'
     },
     nextButton: {
-
-        position: 'absolute',
-        top: 75,
-        left: 70,
+        marginTop: '3%',
+        left: 120,
+        // position: 'absolute',
+        // top: 75,
+        // left: 70,
 
     },
     leaf: {

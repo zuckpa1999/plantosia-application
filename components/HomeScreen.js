@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Text, View, StyleSheet, SafeAreaView, Image } from 'react-native';
+import { Button, Text, View, StyleSheet, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import {
     responsiveScreenHeight,
     responsiveScreenWidth,
@@ -16,30 +16,54 @@ export default function HomeScreen({ navigation }) {
 
                 source={require('../asset/BrocMascot.png')}
             />
-            <Image
-                style={styles.startGame}
-                source={require('../asset/startGame.png')}
-            />
+            <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={() => navigation.navigate('Game')}
+            >
+                <Image
+                    style={styles.startGame}
+                    source={require('../asset/startGame.png')}
+                />
+            </TouchableOpacity>
             <View style={styles.footer}>
-
-                <Image
-                    source={require('../asset/textSearch.png')}
-                />
-                <Image
-                    source={require('../asset/imageSearch.png')}
-                />
-                <Image
-                    source={require('../asset/plantGarden.png')}
-                />
-                <Image
-                    source={require('../asset/setting.png')}
-                />
+                <TouchableOpacity
+                    activeOpacity={0.7}
+                    onPress={() => navigation.navigate('TextSearch')}
+                >
+                    <Image
+                        source={require('../asset/textSearch.png')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity
+                    activeOpacity={0.7}
+                    onPress={() => navigation.navigate('TextSearch')}
+                >
+                    <Image
+                        source={require('../asset/imageSearch.png')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity
+                    activeOpacity={0.7}
+                    onPress={() => navigation.navigate('ImageSearch')}
+                >
+                    <Image
+                        source={require('../asset/plantGarden.png')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity
+                    activeOpacity={0.7}
+                    onPress={() => navigation.navigate('PlantGarden')}
+                >
+                    <Image
+                        source={require('../asset/setting.png')}
+                    />
+                </TouchableOpacity>
             </View>
 
             {/* <Text>Home Screen</Text>
             <Button
                 title="button"
-                onPress={() => navigation.navigate('Game')}
+               
             />
             <Button
                 title="button"

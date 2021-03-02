@@ -36,7 +36,7 @@ export default function HomeScreen({ navigation }) {
                 </TouchableOpacity>
                 <TouchableOpacity
                     activeOpacity={0.7}
-                    onPress={() => navigation.navigate('TextSearch')}
+                    onPress={() => navigation.navigate('ImageSearch')}
                 >
                     <Image
                         source={require('../asset/imageSearch.png')}
@@ -44,7 +44,7 @@ export default function HomeScreen({ navigation }) {
                 </TouchableOpacity>
                 <TouchableOpacity
                     activeOpacity={0.7}
-                    onPress={() => navigation.navigate('ImageSearch')}
+                    onPress={() => navigation.navigate('PlantGarden')}
                 >
                     <Image
                         source={require('../asset/plantGarden.png')}
@@ -52,7 +52,7 @@ export default function HomeScreen({ navigation }) {
                 </TouchableOpacity>
                 <TouchableOpacity
                     activeOpacity={0.7}
-                    onPress={() => navigation.navigate('PlantGarden')}
+                    onPress={() => navigation.navigate('Setting')}
                 >
                     <Image
                         source={require('../asset/setting.png')}

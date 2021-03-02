@@ -13,6 +13,7 @@ import GameScreen6 from './components/Game/GameScreen6.js'
 import GameScreen7 from './components/Game/GameScreen7.js'
 import TextSearchScreen from './components/TextSearch/TextSearchScreen.js'
 import ImageSearchScreen from './components/ImageSearch/ImageSearchScreen.js'
+import ImageSearchScreen2 from './components/ImageSearch/ImageSearchScreen2.js'
 import PlantGardenScreen from './components/PlantGarden/PlantGardenScreen.js'
 import SettingScreen from './components/Setting/SettingScreen.js'
 
@@ -39,6 +40,9 @@ export default function App() {
         <Stack.Screen name="Game7" component={GameScreen7} />
         <Stack.Screen name="TextSearch" component={TextSearchScreen} />
         <Stack.Screen name="ImageSearch" component={ImageSearchScreen} />
+        <Stack.Screen name="ImageSearch2" component={ImageSearchScreen2} />
+        {/* <Stack.Screen name="ImageSearch3" component={ImageSearchScreen3} />
+        <Stack.Screen name="ImageSearch4" component={ImageSearchScreen4} />  */}
         <Stack.Screen name="PlantGarden" component={PlantGardenScreen} />
         <Stack.Screen name="Setting" component={SettingScreen} />
 
